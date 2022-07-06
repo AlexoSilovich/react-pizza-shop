@@ -5,28 +5,33 @@
 
 body {
   background-color: $background;
+  margin: 10px;
 }
 
 .wrapper {
-  width: calc(100vw - 100px);
-  height: 100%;
+  width: 100%;
   background-color: #fff;
-  margin: 50px auto;
   border-radius: 10px;
-  max-width: 1400px;
 }
 
 .content {
-  padding: 40px 0;
+  padding: 20px 0;
 
   &__title {
-    margin: 35px 0;
+    margin: 20px 0;
+    font-size: 40px;
+
+    @media (max-width: 426px) {
+      margin: 10px 0;
+      text-align: center;
+    }
   }
 
   &__items {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   &__top {
@@ -35,6 +40,18 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px 0;
+
+    .categories {
+      overflow-x: scroll;
+    }
+    .categories::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  @media (max-width: 426px) {
+    padding: 0;
   }
 }
 
